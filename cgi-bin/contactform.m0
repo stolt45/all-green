@@ -1,0 +1,8 @@
+<font face=arial size=3>
+
+<b>Name:</b> [$name]<br>
+<b>Email Address:</b> [$email]<br>
+<b>Address:</b> [$address]<br>
+<b>City:</b>[$city] <b>State:</b> [$state] <b>Zip:</b> [$zipcode]<br>
+<b>Telephone:</b> [$telephone]<br>
+<b>Comments or Questions:</b> [$comments]<br>
