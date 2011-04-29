@@ -40,16 +40,16 @@ post '/contact' do
   #Pony.mail(:to => 'stolt45@gmail.com', :from => "#{mail}", :subject => "art inquiry from #{name}", :body => "#{body} \n \n #{address} \n #{city}, #{state} #{zipcode} \n #{telephone}")
 
   Pony.mail(:to => 'stolt45@gmail.com', 
-                    :from => '#{mail}', 
-                    :subject => 'All Green Irrigation Inquiry from #{name}', 
+                    :from => "#{mail}", 
+                    :subject => "All Green Irrigation Inquiry from #{name}", 
                     :body => "#{body} \n \n #{address} \n #{city}, #{state} #{zipcode} \n #{telephone}",
                     :via => :smtp, 
-                    :smtp => { 
+                    :via_options => { 
                       :port   => '25', 
-                      :user  => ENV['SENDGRID_USERNAME'], 
+                      :user_name  => ENV['SENDGRID_USERNAME'], 
                       :password   => ENV['SENDGRID_PASSWORD'], 
-                      :host   => 'smtp.sendgrid.net', 
-                      :auth   => :plain, 
+                      :address   => 'smtp.sendgrid.net', 
+                      :authentication   => :plain, 
                       :domain => ENV['SENDGRID_DOMAIN'] 
                      })
 
