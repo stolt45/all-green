@@ -36,8 +36,6 @@ post '/contact' do
   telephone = params[:telephone]
 
   puts "#{body} \n \n #{address} \n #{city}, #{state} #{zipcode} \n #{telephone}"
-  #flanzz@aol.com
-  #Pony.mail(:to => 'stolt45@gmail.com', :from => "#{mail}", :subject => "art inquiry from #{name}", :body => "#{body} \n \n #{address} \n #{city}, #{state} #{zipcode} \n #{telephone}")
 
   Pony.mail(:to => 'flanzz@aol.com', 
                     :from => "#{mail}", 
